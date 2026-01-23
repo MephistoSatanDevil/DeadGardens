@@ -40,7 +40,7 @@ Jastey, for helping with the Dead() checks and for showing me how to do journals
 1.0 Initial Release
 
 1.1 :
- - 
+ - tRAIFICATION
  - AR2602 isn't overwrited anymore (SpawnPtDeactivate / Activate)
 
 #### WALKTHROUGH

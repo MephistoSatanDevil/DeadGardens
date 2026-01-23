@@ -14,10 +14,10 @@ LANGUAGE ~English~
          ~DeadGardens/Languages/english/setup.tra~ //you'd put the mod title in here.
          ~DeadGardens/Languages/english/JournalEntries.tra~
 
-BEGIN ~DeadGardens Installation~
+BEGIN @1 /* DeadGardens Installation */
 DESIGNATED 0
 LABEL ~Dead_Gardens-Glittergear~
-REQUIRE_PREDICATE GAME_IS ~bg2ee tob bgt eet~ ~ToB is not installed! Please install the Throne of Bhaal expansion.~
+REQUIRE_PREDICATE GAME_IS ~bg2ee tob bgt eet~ @2 /* ToB is not installed! Please install the Throne of Bhaal expansion. */
 
 // Still needs fixing: Getting rid of the shadow druid when the quest is over, figure out why quest reward's icon isn't showing up
 
@@ -44,48 +44,48 @@ COMPILE ~DeadGardens/Dialogues/THUNDERBURP.d~
 
 //creatures
 COPY ~DeadGardens/creatures/GGDGMQG.cre~ ~override/GGDGMQG.cre~ //Archdruid MQG
-	SAY NAME1 ~Archdruid Arianelle~
-	SAY NAME2 ~Archdruid Arianelle~
+	SAY NAME1 @3 /* Archdruid Arianelle */
+	SAY NAME2 @3 /* Archdruid Arianelle */
 
 COPY ~DeadGardens/creatures/GGDGDD.cre~ ~override/GGDGDD.cre~
-	SAY NAME1 ~Archdruid Rianor~
-	SAY NAME2 ~Archdruid Rianor~
+	SAY NAME1 @4 /* Archdruid Rianor */
+	SAY NAME2 @4 /* Archdruid Rianor */
 
 COPY ~DeadGardens/creatures/GGDGK01.cre~ ~override/GGDGK01.cre~ //Assassin child
-	SAY NAME1 ~Alliast~
-	SAY NAME2 ~Alliast~
+	SAY NAME1 @5 /* Alliast */
+	SAY NAME2 @5 /* Alliast */
 
 COPY ~DeadGardens/creatures/GGDGK02.cre~ ~override/GGDGK02.cre~ //druid child
-	SAY NAME1 ~Dalomin~
-	SAY NAME2 ~Dalomin~
+	SAY NAME1 @6 /* Dalomin */
+	SAY NAME2 @6 /* Dalomin */
 
 COPY ~DeadGardens/creatures/GGDGK03.cre~ ~override/GGDGK03.cre~ //cleric child
-	SAY NAME1 ~Ceranan~
-	SAY NAME2 ~Ceranan~
+	SAY NAME1 @7 /* Ceranan */
+	SAY NAME2 @7 /* Ceranan */
 
 
 
 //items
 
 COPY ~DeadGardens/items/GGDGS0.itm~ ~override/GGDGS0.itm~ 
-     SAY NAME1 ~Quarterstaff~
-     SAY NAME2 ~Staff of the Hungaring Swarm~
-     SAY DESC ~This +2 quarterstaff was made by a Shadow Druid. It vibrates occaisionally and sometimes you hear a buzzing sound eminating from it. The staff is home to a hive of bloodthirsty insects, who would be happy to feast upon your enemies.
+     SAY NAME1 @8 /* Quarterstaff */
+     SAY NAME2 @9 /* Staff of the Hungaring Swarm */
+     SAY DESC @10 /* This +2 quarterstaff was made by a Shadow Druid. It vibrates occaisionally and sometimes you hear a buzzing sound eminating from it. The staff is home to a hive of bloodthirsty insects, who would be happy to feast upon your enemies.
 
 STATISTICS:
 
 THAC0 +2
 
 Allows Insect Plague 1x/day
-~
+ */
 COPY ~DeadGardens/items/GGDGS2.itm~ ~override/GGDGS2.itm~ 
-     SAY NAME1 ~Quarterstaff~
-     SAY NAME2 ~Staff of the Undead Druid~
-     SAY DESC ~This +2 Staff Mace once belonged to the Archdruid Rianor. Rianor's unlife has influenced this staff, imbuing it with energy from the Fugue Plane.
+     SAY NAME1 @8 /* Quarterstaff */
+     SAY NAME2 @11 /* Staff of the Undead Druid */
+     SAY DESC @12 /* This +2 Staff Mace once belonged to the Archdruid Rianor. Rianor's unlife has influenced this staff, imbuing it with energy from the Fugue Plane.
 
 STATISTICS:
 
 TAC0 +3
 Resist Cold 50%
 Summon Shambling Mound 1x/day
-~
+ */

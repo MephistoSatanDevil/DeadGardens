@@ -1,0 +1,26 @@
+@1    = ~Dead Gardens~
+@2    = ~Need ToB, BGT, BG2EE or EET.~
+@3    = ~Archdruid Arianelle~
+@4    = ~Archdruid Rianor~
+@5    = ~Alliast~
+@6    = ~Dalomin~
+@7    = ~Ceranan~
+@8    = ~Quarterstaff~
+@9    = ~Staff of the Hungaring Swarm~
+@10   = ~This +2 quarterstaff was made by a Shadow Druid. It vibrates occaisionally and sometimes you hear a buzzing sound eminating from it. The staff is home to a hive of bloodthirsty insects, who would be happy to feast upon your enemies.
+
+STATISTICS:
+
+THAC0 +2
+
+Allows Insect Plague 1x/day
+~
+@11   = ~Staff of the Undead Druid~
+@12   = ~This +2 Staff Mace once belonged to the Archdruid Rianor. Rianor's unlife has influenced this staff, imbuing it with energy from the Fugue Plane.
+
+STATISTICS:
+
+TAC0 +3
+Resist Cold 50%
+Summon Shambling Mound 1x/day
+~
