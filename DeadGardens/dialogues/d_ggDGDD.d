@@ -51,15 +51,13 @@ END
 //PC accepts quest
 IF ~~ THEN BEGIN 2E
 	SAY ~Thank you. I will linger here until you return.~
-IF ~~ THEN DO ~
-   SetGlobal("GGDGMQ","GLOBAL",2) SetGlobal("GGDGMQA","GLOBAL",1) AddJournalEntry(@5101, QUEST)~ EXIT
+		IF ~~ THEN DO ~SetGlobal("GGDGMQ","GLOBAL",2) SetGlobal("GGDGMQA","GLOBAL",1) AddJournalEntry(@5101, QUEST)~ EXIT
 END
 
 //PC rejects quest
 IF ~~ THEN BEGIN 3
 	SAY ~Then I shall linger here.~ IF ~~ THEN EXIT
-IF ~~ THEN DO ~
-   SetGlobal("GGDGMQ","GLOBAL",2) ~ EXIT 
+		IF ~~ THEN DO ~SetGlobal("GGDGMQ","GLOBAL",2) ~ EXIT 
 END					
 
 
@@ -80,12 +78,12 @@ END
 
 IF ~~ THEN BEGIN 10E
 	SAY ~Thank you. I will linger here until you return.~
-IF ~~ THEN DO ~
-	SetGlobal("GGDGMQA","GLOBAL",1) AddJournalEntry(@5101, QUEST)~ EXIT //variable Acceptedquest = 1
+		IF ~~ THEN DO ~SetGlobal("GGDGMQA","GLOBAL",1) AddJournalEntry(@5101, QUEST)~ EXIT //variable Acceptedquest = 1
 END
 
 IF ~~ THEN BEGIN 11
-	SAY ~Then I shall linger here.~ IF ~~ THEN EXIT
+	SAY ~Then I shall linger here.~
+		IF ~~ THEN EXIT
 END					
 
 
@@ -120,12 +118,12 @@ END
 
 IF ~~ THEN BEGIN 20E
 	SAY ~Thank you. I will linger here until you return.~
-IF ~~ THEN DO ~
-	SetGlobal("GGDGMQA","GLOBAL",1) AddJournalEntry(@5101, QUEST)~ EXIT //variable Acceptedquest = 1
+		IF ~~ THEN DO ~SetGlobal("GGDGMQA","GLOBAL",1) AddJournalEntry(@5101, QUEST)~ EXIT //variable Acceptedquest = 1
 END
 
 IF ~~ THEN BEGIN 1000
-	SAY ~Then I shall linger here.~ IF ~~ THEN EXIT
+	SAY ~Then I shall linger here.~
+		IF ~~ THEN EXIT
 END						
 
 /////////////////////////////////////////
@@ -177,8 +175,7 @@ END
 
 IF ~Dead("ggAlliast") Dead("ggDalomin") Dead("ggCeranan")~ THEN BEGIN 40
 	SAY ~At last. I felt their souls pass through to the Fugue Plane. My mistake has been corrected. I linger here no more...~
-IF ~~ THEN DO ~
-	SetGlobal("GGDGMQ","GLOBAL",9) DestroySelf() AddJournalEntry(@5105, QUEST) ~ EXIT 
+		IF ~~ THEN DO ~SetGlobal("GGDGMQ","GLOBAL",9) DestroySelf() AddJournalEntry(@5105, QUEST) ~ EXIT 
 END
 
 
@@ -197,8 +194,7 @@ APPEND d_ggDGDD
 
 IF ~~ THEN BEGIN smiteTrivialResult
 	SAY ~Perhaps... Perhaps. And as the rainclouds cannot undo the rain they have brought, neither can I undo what I have done. I see that now. Here, I gift you my staff. Return to Arianelle. I am sorry.~
-IF ~~ THEN DO ~
-	AddJournalEntry(@5105, QUEST) GiveItemCreate("GGDGS2",Player1,1,1,0) SetGlobal("GGDGMQ","GLOBAL",9) DestroySelf()~ EXIT 
+		IF ~~ THEN DO ~AddJournalEntry(@5105, QUEST) GiveItemCreate("GGDGS2",Player1,1,1,0) SetGlobal("GGDGMQ","GLOBAL",9) DestroySelf()~ EXIT 
 END
 END
 
@@ -216,8 +212,7 @@ APPEND d_ggDGDD
 
 IF ~~ THEN BEGIN smiteEasyResult
 	SAY ~Perhaps not. But still, the fact remains that they have committed atrocities. This needs to be changed; if not for my sake, then for the sake of others. Alliast is the worst of the three, an assassin in Athkatla. If his soul travels through the Fugue Plane, then I shall do the same.~
-IF ~~ THEN DO ~
-	SetGlobal("GGDGMQE","GLOBAL",1) AddJournalEntry(@5103, QUEST)~ EXIT 
+		IF ~~ THEN DO ~SetGlobal("GGDGMQE","GLOBAL",1) AddJournalEntry(@5103, QUEST)~ EXIT 
 END
 END
 
@@ -235,8 +230,7 @@ APPEND d_ggDGDD
 
 IF ~~ THEN BEGIN smiteMediumResult
 	SAY ~Perhaps not. But still, the fact remains that they have committed atrocities. This needs to be changed; if not for my sake, then for the sake of others. Alliast and Dalomin are the worst of the three, an assassin in Athkatla and a Shadow Druid near Trademeet. If their souls travels through the Fugue Plane, then I shall do the same.~
-IF ~~ THEN DO ~
-	SetGlobal("GGDGMQM","GLOBAL",1) AddJournalEntry(@5104, QUEST)~ EXIT 
+		IF ~~ THEN DO ~SetGlobal("GGDGMQM","GLOBAL",1) AddJournalEntry(@5104, QUEST)~ EXIT 
 END
 
 
@@ -245,13 +239,13 @@ END
 /////////////////////////////
 
 IF ~Global("GGDGMQE","GLOBAL",1) !Dead("ggAlliast")~ THEN BEGIN 100
-	SAY ~Alliast yet lives. Go to Athkatla. Find the assassin, and rectify my mistake.~ IF ~~ THEN EXIT
+	SAY ~Alliast yet lives. Go to Athkatla. Find the assassin, and rectify my mistake.~
+		IF ~~ THEN EXIT
 END
 
 IF ~Global("GGDGMQE","GLOBAL",1) Dead("ggAlliast")~ THEN BEGIN 101
 	SAY ~At last. I felt his soul pass through to the Fugue Plane. Part of my mistake has been corrected. As promised, I linger here no more...~
-IF ~~ THEN DO ~
-	SetGlobal("GGDGMQ","GLOBAL",9) AddJournalEntry(@5105, QUEST) DestroySelf()~ EXIT
+		IF ~~ THEN DO ~SetGlobal("GGDGMQ","GLOBAL",9) AddJournalEntry(@5105, QUEST) DestroySelf()~ EXIT
 END
 
 //////////////////////////////
@@ -259,17 +253,18 @@ END
 /////////////////////////////
 
 IF ~Global("GGDGMQM","GLOBAL",1) !Dead("ggAlliast")~ THEN BEGIN 200
-	SAY ~Alliast yet lives. Go to Athkatla. Find the assassin, and rectify my mistake.~ IF ~~ THEN EXIT
+	SAY ~Alliast yet lives. Go to Athkatla. Find the assassin, and rectify my mistake.~
+		IF ~~ THEN EXIT
 END
 
 IF ~Global("GGDGMQM","GLOBAL",1) !Dead("ggDalomin")~ THEN BEGIN 201
-	SAY ~Dalomin yet lives. Find him skulking about near Shadow Druid activity, and rectify my mistake.~ IF ~~ THEN EXIT 
+	SAY ~Dalomin yet lives. Find him skulking about near Shadow Druid activity, and rectify my mistake.~
+		IF ~~ THEN EXIT 
 END
 
 IF ~Global("GGDGMQM","GLOBAL",1) Dead("ggAlliast") Dead("ggDalomin")~ THEN BEGIN 202
 	SAY ~At last. I felt their souls pass through to the Fugue Plane. Part of my mistake has been corrected. As promised, I linger here no more...~
-IF ~~ THEN DO ~
-	SetGlobal("GGDGMQ","GLOBAL",9) AddJournalEntry(@5105, QUEST) DestroySelf()~ EXIT
+		IF ~~ THEN DO ~SetGlobal("GGDGMQ","GLOBAL",9) AddJournalEntry(@5105, QUEST) DestroySelf()~ EXIT
 END
 END
 

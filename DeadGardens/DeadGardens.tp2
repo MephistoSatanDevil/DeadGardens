@@ -1,27 +1,29 @@
-BACKUP ~DeadGardens/backup~
+BACKUP ~weidu_external/DeadGardens/backup~
 AUTHOR ~Glittergear~
-VERSION ~1.0 -jasteys edit~
+VERSION ~1.1~
 
 
-README ~DeadGardens/DeadGardens Readme.txt~ 
+README ~DeadGardens/DeadGardens.txt~ 
 
 
-AUTO_TRA ~DeadGardens/translations/%s~ //The "%s" reads in the chosen language folder via LANGUAGE. Currently there is only one.
+AUTO_TRA ~DeadGardens/Languages/%s~ //The "%s" reads in the chosen language folder via LANGUAGE. Currently there is only one.
 
 
 LANGUAGE ~English~
          ~english~   
-         ~DeadGardens/translations/english/setup.tra~ //you'd put the mod title in here.
-         ~DeadGardens/translations/english/JournalEntries.tra~
+         ~DeadGardens/Languages/english/setup.tra~ //you'd put the mod title in here.
+         ~DeadGardens/Languages/english/JournalEntries.tra~
 
 BEGIN ~DeadGardens Installation~
+DESIGNATED 0
+LABEL ~Dead_Gardens-Glittergear~
+REQUIRE_PREDICATE GAME_IS ~bg2ee tob bgt eet~ ~ToB is not installed! Please install the Throne of Bhaal expansion.~
+
+// Still needs fixing: Getting rid of the shadow druid when the quest is over, figure out why quest reward's icon isn't showing up
 
 
-ADD_JOURNAL TITLE (@5099) @5100 @5101 @5102 @5103 @5104 @5105 @5106 USING ~DeadGardens/translations/english/JournalEntries.tra~
+ADD_JOURNAL TITLE (@5099) @5100 @5101 @5102 @5103 @5104 @5105 @5106 USING ~DeadGardens/Languages/%s/JournalEntries.tra~
 
-
-//override area (wanted to delete the spawn points)
-COPY_EXISTING ~ar2602.are~ ~override/ar2602.are~
 
 //spawns
 EXTEND_TOP ~AR2602.bcs~ ~DeadGardens/Scripts/AR2602.baf~ //Tethyr Forest cave
@@ -70,7 +72,8 @@ COPY ~DeadGardens/items/GGDGS0.itm~ ~override/GGDGS0.itm~
      SAY NAME2 ~Staff of the Hungaring Swarm~
      SAY DESC ~This +2 quarterstaff was made by a Shadow Druid. It vibrates occaisionally and sometimes you hear a buzzing sound eminating from it. The staff is home to a hive of bloodthirsty insects, who would be happy to feast upon your enemies.
 
-STATISTICS
+STATISTICS:
+
 THAC0 +2
 
 Allows Insect Plague 1x/day
@@ -80,7 +83,8 @@ COPY ~DeadGardens/items/GGDGS2.itm~ ~override/GGDGS2.itm~
      SAY NAME2 ~Staff of the Undead Druid~
      SAY DESC ~This +2 Staff Mace once belonged to the Archdruid Rianor. Rianor's unlife has influenced this staff, imbuing it with energy from the Fugue Plane.
 
-STATISTICS
+STATISTICS:
+
 TAC0 +3
 Resist Cold 50%
 Summon Shambling Mound 1x/day

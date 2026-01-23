@@ -1,9 +1,10 @@
 //spawns the cleric in the Lathander temple
 IF
-Global("GGDGK03spawner","GLOBAL",0)
+	Global("GGDGK03spawner","MYAREA",0)
+	Global("GGDGMQ","GLOBAL",2)
 THEN
-RESPONSE #100
-CreateCreature("GGDGK03",[330.854],3)  // To choose your own coordinates, choose a spot in the game and press CTRL-X
-SetGlobal("GGDGK03spawner","GLOBAL",1)
-Continue()
+	RESPONSE #100
+		CreateCreature("GGDGK03",[330.854],3)  // To choose your own coordinates, choose a spot in the game and press CTRL-X
+		SetGlobal("GGDGK03spawner","MYAREA",1)
+		Continue()
 END

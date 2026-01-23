@@ -6,7 +6,8 @@ BEGIN d_ggDGK2 //shadow druid dialogue
 //////////////////////////////////////
 
 IF ~NumTimesTalkedTo(0) Global("GGDGSDA","GLOBAL",0)~ THEN BEGIN 0
-	SAY ~I have nothing to say to you.~ IF ~~ THEN EXIT
+	SAY ~I have nothing to say to you.~
+		IF ~~ THEN EXIT
 END
 
 IF ~NumTimesTalkedTo(1) Global("GGDGSDA","GLOBAL",0)~ THEN BEGIN 1
@@ -32,8 +33,7 @@ END
 
 IF ~NumTimesTalkedTo(4) Global("GGDGSDA","GLOBAL",0)~ THEN BEGIN 12
 	SAY ~That's enough! You've pestered me one time too many!~
-IF ~~ THEN DO ~
-    Enemy()~ EXIT
+		IF ~~ THEN DO ~Enemy()~ EXIT
 END
 
 IF ~~ THEN BEGIN 3
@@ -52,8 +52,7 @@ END
 
 IF ~~ THEN BEGIN 4
 	SAY ~You! You killed Faldorn?! You're the so-called "Hero of Trademeet"? In the name of Nature, I will end you!~
-IF ~~ THEN DO ~
-    Enemy()~ EXIT
+		IF ~~ THEN DO ~Enemy()~ EXIT
 END
 
 IF ~~ THEN BEGIN 5
@@ -63,15 +62,16 @@ IF ~~ THEN BEGIN 5
 END
 
 IF ~~ THEN BEGIN 6
-	SAY ~Hmmm... Generous of you, but no. My task is mine and mine alone.~ IF ~~ THEN EXIT
+	SAY ~Hmmm... Generous of you, but no. My task is mine and mine alone.~
+		IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN 8
-	SAY ~Quit pestering me.~ IF ~~ THEN EXIT
+	SAY ~Quit pestering me.~
+		IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN 9
 	SAY ~Does he now? And he's too incompetent to do it himself. Come then! In the name of Nature, I will destory you!~
-IF ~~ THEN DO ~
-    Enemy()~ EXIT
+		IF ~~ THEN DO ~Enemy()~ EXIT
 END

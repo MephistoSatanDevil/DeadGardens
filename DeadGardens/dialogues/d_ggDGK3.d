@@ -11,7 +11,8 @@ IF ~TRUE()~ THEN BEGIN 0
 END
 
 IF ~~ THEN BEGIN 1
-	SAY ~I'm afraid not. You'll have to speak with the Dawnmaster for those.~ IF ~~ THEN EXIT
+	SAY ~I'm afraid not. You'll have to speak with the Dawnmaster for those.~
+		IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN 2
@@ -22,7 +23,8 @@ IF ~~ THEN BEGIN 2
 END		//you can ask cleric on date to get her out of the area/away from witnesses
 
 IF ~~ THEN BEGIN 3
-	SAY ~Er... yes. Happy to help..~ IF ~~ THEN EXIT
+	SAY ~Er... yes. Happy to help..~
+		IF ~~ THEN EXIT
 END
 
 
@@ -34,12 +36,10 @@ END
 
 IF ~~ THEN BEGIN 6
 	SAY ~But--you can't be serious! I've done nothing!~
-IF ~~ THEN DO ~
-    Enemy()~ EXIT
+		IF ~~ THEN DO ~Enemy()~ EXIT
 END
 
 IF ~~ THEN BEGIN 7
 	SAY ~That's terrible! I can't believe... no. There's nothing--this is just. Thank you for telling me. I'll get out of here, in case he sends someone else after me. Please, put Rianor to rest. He doesn't deserve this.~
- IF ~~ THEN DO ~
-    EscapeArea()~ EXIT
+ IF ~~ THEN DO ~EscapeArea()~ EXIT
 END

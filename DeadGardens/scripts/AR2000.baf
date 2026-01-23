@@ -1,19 +1,21 @@
 //spawns the archdruid, shadow druid in Trademeet
 
 IF
-Global ("GGDGMQGspawner","GLOBAL",0) // Dead("Faldorn")
+	Global ("GGDGMQGspawner","MYAREA",0)
+	Dead("cefald01")
 THEN
-RESPONSE #100
-CreateCreature("GGDGMQG",[1834.1400],3) 
-SetGlobal("GGDGMQGspawner","GLOBAL",1)
-Continue()
+	RESPONSE #100
+		CreateCreature("GGDGMQG",[1834.1400],3) 
+		SetGlobal("GGDGMQGspawner","MYAREA",1)
+		Continue()
 END
 
 IF
-Global("GGDGK02spawner","GLOBAL",0) Global("GGDGMQ","GLOBAL",2)
+	Global("GGDGK02spawner","MYAREA",0)
+	Global("GGDGMQ","GLOBAL",2)
 THEN
-RESPONSE #100
-CreateCreature("GGDGK02",[175.3433],3)
-SetGlobal("GGDGK02spawner","GLOBAL",1)
-Continue()
+	RESPONSE #100
+		CreateCreature("GGDGK02",[175.3433],3)
+		SetGlobal("GGDGK02spawner","MYAREA",1)
+		Continue()
 END

@@ -11,7 +11,8 @@ IF ~True()~ THEN BEGIN 0
 END
 
 IF ~~ THEN BEGIN 1
-	SAY ~Do it somewhere else.~ IF ~~ THEN EXIT
+	SAY ~Do it somewhere else.~
+		IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN 2
@@ -22,6 +23,5 @@ END
 
 IF ~~ THEN BEGIN 3
 	SAY ~Does he, now? Old fool finally realised he should've let me be sacrificed! Ha! It's too late for that now!~
-IF ~~ THEN DO ~
-    Enemy()~ EXIT
+		IF ~~ THEN DO ~Enemy()~ EXIT
 END
