@@ -1,9 +1,13 @@
 # Dead Gardens
 
+-------------------------------------------------------------------------------------
+
 <p style="text-align: center;">"The story behind the painting I drew is already told
 				No more tearstains on the pages of my diary 
 			Tired but unable to give up since I'm
 				Responsible for the lives I saved"</p>
+
+-------------------------------------------------------------------------------------
 
 [![Release](https://img.shields.io/github/v/release/Glittergear/DeadGardens?include_prereleases&color=41788a)](https://github.com/Glittergear/DeadGardens/releases)
 [![Published](https://img.shields.io/github/release-date-pre/Glittergear/DeadGardens?display_date=published_at&label=published&color=014a69)](https://github.com/Glittergear/DeadGardens/releases/latest)
@@ -40,8 +44,12 @@ Jastey, for helping with the Dead() checks and for showing me how to do journals
 1.0 Initial Release
 
 1.1 :
- - tRAIFICATION
+ - Traification
  - AR2602 isn't overwrited anymore (SpawnPtDeactivate / Activate)
+ - EXTEND_BOTTOM vs EXTEND_TOP
+ - LABEL / REQUIRE_PREDICATE / DESIGNATED / INI / README / WeiduModPackager
+ - Missing Global("GGDGMQ","GLOBAL",2) in AR0902.baf
+ - Items correction
 
 #### WALKTHROUGH
 -----------------

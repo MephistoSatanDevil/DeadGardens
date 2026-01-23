@@ -175,7 +175,7 @@ END
 
 IF ~Dead("ggAlliast") Dead("ggDalomin") Dead("ggCeranan")~ THEN BEGIN 40
 	SAY @223 /* At last. I felt their souls pass through to the Fugue Plane. My mistake has been corrected. I linger here no more... */
-		IF ~~ THEN DO ~SetGlobal("GGDGMQ","GLOBAL",9) DestroySelf() AddJournalEntry(@5105, QUEST) ~ EXIT 
+		IF ~~ THEN DO ~SetGlobal("GGDGMQ","GLOBAL",9) AddJournalEntry(@5105, QUEST) DestroySelf()~ EXIT 
 END
 
 

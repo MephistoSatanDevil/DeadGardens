@@ -20,6 +20,14 @@ Jastey, for helping with the Dead() checks and for showing me how to do journals
 CHANGELOG
 1.0 Initial Release
 
+1.1 :
+ - Traification
+ - AR2602 isn't overwrited anymore (SpawnPtDeactivate / Activate)
+ - EXTEND_BOTTOM vs EXTEND_TOP
+ - LABEL / REQUIRE_PREDICATE / DESIGNATED / INI / README / WeiduModPackager
+ - Missing Global("GGDGMQ","GLOBAL",2) in AR0902.baf
+ - Items correction
+
 WALKTHROUGH
 To start the quest, kill Faldorn and then talk to Archdruid Arianelle, 
 in the Trademeet Square near the fountain.

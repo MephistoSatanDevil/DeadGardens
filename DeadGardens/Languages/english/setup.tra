@@ -11,16 +11,41 @@
 
 STATISTICS:
 
-THAC0 +2
+Charge ability (1x per day): 
+- Insect Plague (instant) (as a level 10 spellcaster)
 
-Allows Insect Plague 1x/day
+Enchantment: +5
+THAC0: +2
+Damage: 1d6 +1 (Crushing)
+Speed Factor: 1
+Proficiency Type: Staff
+Type: Two-Handed
+
+Requires: 
+- 5 Strength
+
+Weight: 4
 ~
 @11   = ~Staff of the Undead Druid~
 @12   = ~This +2 Staff Mace once belonged to the Archdruid Rianor. Rianor's unlife has influenced this staff, imbuing it with energy from the Fugue Plane.
 
 STATISTICS:
 
-TAC0 +3
-Resist Cold 50%
-Summon Shambling Mound 1x/day
+Equipped abilities: 
+- Cold Resistance: +50%
+
+Charge ability (1x per day): 
+- Summon a Shambling Mound for 100 seconds
+
+Enchantment: +4
+THAC0: +3
+Damage: 1d6 +3 (Crushing)
+Speed Factor: 1
+Proficiency Type: Staff
+Type: Two-Handed
+
+Requires: 
+- 5 Strength
+
+Weight: 2
 ~
