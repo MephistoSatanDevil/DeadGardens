@@ -1,4 +1,4 @@
-EXTEND_TOP ~BERNARD~ 0 22 37
+EXTEND_BOTTOM ~BERNARD~ 0 22 37
 	IF ~Global("GGDGMQ","GLOBAL",2)~ THEN REPLY ~I'm looking for Alliast. You seen him?~ GOTO seenAlliast
 END
 

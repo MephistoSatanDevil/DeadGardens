@@ -1,4 +1,4 @@
-EXTEND_TOP ~WINNKEEP~ 0
+EXTEND_BOTTOM ~WINNKEEP~ 0
 	IF ~Global("GGDGMQ","GLOBAL",2)~ THEN REPLY ~I'm looking for Alliast. You seen him?~  GOTO seenAlliast
 END
 

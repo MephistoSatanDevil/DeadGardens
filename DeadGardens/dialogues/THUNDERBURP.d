@@ -1,4 +1,4 @@
-EXTEND_TOP ~FFBART~ 0 7 10 16 21
+EXTEND_BOTTOM ~FFBART~ 0 7 10 16 21
 	IF ~Global("GGDGMQ","GLOBAL",2)~ THEN REPLY ~I'm looking for Alliast. You seen him?~  GOTO seenAlliast
 END
 
